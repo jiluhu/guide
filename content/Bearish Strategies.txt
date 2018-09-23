@@ -1,5 +1,0 @@
-"long-put.aspx"  Put Buying
-"bear-put-spread.aspx"  Bear Put Spread
-"put-backspread.aspx"  Put Backspread
-"covered-put-writing.aspx"  Covered Puts
-"naked-call-writing.aspx"  Naked Calls

@@ -1,0 +1,8 @@
+Ratio_Spread,ratio-spread.aspx
+The_Straddle,long-straddle.aspx
+The_Strangle,long-strangle.aspx
+The_Butterfly,butterfly-spread.aspx
+The_Condor,condor.aspx
+The_Iron_Butterfly,iron-butterfly.aspx
+The_Iron_Condor,iron-condor.aspx
+Calendar_Straddle,calendar-straddle.aspx

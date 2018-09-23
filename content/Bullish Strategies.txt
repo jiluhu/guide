@@ -1,8 +1,0 @@
-"long-call.aspx"  Call Buying
-"bull-call-spread.aspx"  Bull Call Spread
-"the-collar-strategy.aspx"  The Collar
-"call-backspread.aspx"  Call Backspread
-"bull-calendar-spread.aspx"  Bull Calendar Spread
-"covered-call-writing.aspx"  Covered Calls
-"uncovered-put-writing.aspx"  Naked Puts
-"covered-straddle.aspx"  Covered Straddle

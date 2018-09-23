@@ -1,7 +1,0 @@
-"synthetic-position.aspx"  Overview
-"synthetic-long-call.aspx"  Synthetic Long Call
-"synthetic-long-put.aspx"  Synthetic Long Put
-"synthetic-long-stock.aspx"  Synthetic Long Stock
-"synthetic-short-call.aspx"  Synthetic Short Call
-"synthetic-short-put.aspx"  Synthetic Short Put
-"synthetic-short-stock.aspx"  Synthetic Short Stock

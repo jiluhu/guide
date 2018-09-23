@@ -1,0 +1,5 @@
+Put_Buying,long-put.aspx
+Bear_Put_Spread,bear-put-spread.aspx
+Put_Backspread,put-backspread.aspx
+Covered_Puts,covered-put-writing.aspx
+Naked_Calls,naked-call-writing.aspx

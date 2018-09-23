@@ -1,8 +1,0 @@
-"ratio-spread.aspx"  Ratio Spread
-"long-straddle.aspx"  The Straddle
-"long-strangle.aspx"  The Strangle
-"butterfly-spread.aspx"  The Butterfly
-"condor.aspx"  The Condor
-"iron-butterfly.aspx"  The Iron Butterfly
-"iron-condor.aspx"  The Iron Condor
-"calendar-straddle.aspx"  Calendar Straddle
