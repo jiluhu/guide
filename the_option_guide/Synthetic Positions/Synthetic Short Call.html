@@ -1,0 +1,531 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	Synthetic Short Call Explained | Online Option Trading Guide
+</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="shortcut icon" href="http://www.theoptionsguide.com/favicon.ico" type="image/x-icon" />
+
+	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/yeti/bootstrap.min.css" /><link rel="stylesheet" href="stylesheet.css" />
+
+				<!-- FB CSS -->
+	<link rel="stylesheet" href="fb.css" />
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+				<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+		<!-- Show Exit Intent Popup based on visitor country -->
+
+		<!-- Exit Intent Dialog -->
+		<script type="text/javascript" src="http://beeker.io/lab/exit-intent-popup/bioep.min.js"></script>
+
+		<script type="text/javascript">
+			var countryCode = '';
+			
+			function jsonpCallback(data) {
+			countryCode = data.address.country_code;
+
+			if (countryCode != 'US') {
+			
+
+			$('#adMiddle').html('<a rel="nofollow" target="_blank" href="https://iqoption.com/en/tutorials?aff=48648&afftrack=togbannermiddle"><img src="https://images01.iqoption.com/09/0209/static-04400167357364830209.gif" width="728" height="90" /></a>');
+
+			$('#adMiddleMobile').html('<div class="well"><a rel="nofollow" target="_blank" href="https://iqoption.com/en/tutorials?aff=48648&afftrack=togbannermiddlemobile"><img src="https://images01.iqoption.com/45/9745/static-03261764547320479745.gif" width="300" height="250" /></a></div>');
+
+			bioEp.init({
+			width: 800,
+			height: 600,
+			<!-- Make sure the following code is all in one single line, otherwise will not work! -->
+			html: '<a rel="nofollow" href="https://www.binance.com/?ref=21120722" target="_top"><img width="800" height="600" src="images/binance.jpg" alt="Start Trading Cryptocurrencies Now!" border="0"/></a>', cookieExp: 0 });
+
+			}
+
+			else {
+			<!-- Ditched ETrade for Adsense in USA -->
+			<!-- $('#adTopDesktop').html('<a rel="nofollow" href="https://ad.doubleclick.net/ddm/jump/N84001.3000316OPTIONSGUIDE/B10727559.200213279;sz=300x250;ord=[timestamp]?" target="_top"><img src="https://ad.doubleclick.net/ddm/ad/N84001.3000316OPTIONSGUIDE/B10727559.200213279;sz=300x250;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" width="300" height="250" alt="" border="0"/></a>'); -->
+			<!-- $('#adTopMobile').html('<a rel="nofollow" href="https://ad.doubleclick.net/ddm/jump/N84001.3000316OPTIONSGUIDE/B10727559.200209880;sz=300x50;ord=[timestamp]?" target="_top"><img src="https://ad.doubleclick.net/ddm/ad/N84001.3000316OPTIONSGUIDE/B10727559.200209880;sz=300x50;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" width="300" height="50" alt="" border="0"/></a>'); -->
+
+			bioEp.init({
+			width: 800,
+			height: 600,
+			<!-- Make sure the following code is all in one single line, otherwise will not work! -->
+			html: '<a rel="nofollow" href="https://www.binance.com/?ref=21120722" target="_top"><img width="800" height="600" src="images/binance.jpg" alt="Start Trading Cryptocurrencies Now!" border="0"/></a>', cookieExp: 0 });
+
+
+
+		}
+
+		}
+	</script>
+
+
+
+
+		<!-- Adsense Page Level Ads -->
+		<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({
+			google_ad_client: "ca-pub-6324364492949153",
+			enable_page_level_ads: true
+			});
+		</script>
+		
+<meta name="description" content="What is Synthetic Short Call? See detailed explanations and examples on how and when to use the Synthetic Short Call options trading strategy." /><meta name="keywords" content="synthetic short call, synthetic short call options, synthetic short call strategy, synthetic short call tutorial, synthetic short call definition, synthetic short call explained" /></head>
+<body>
+	<!-- Facebook SDK integration -->
+
+	<script type='text/javascript'>
+		window.onload=function(){
+		window.fbAsyncInit = function() {
+		FB.Event.subscribe(
+		'ad.loaded',
+		function(placementID) {
+		console.log('ad loaded');
+		}
+		);
+
+		FB.Event.subscribe(
+		'ad.error',
+		function(errorCode, errorMessage, placementID) {
+		console.log('ad error ' + errorCode + ': ' + errorMessage);
+		}
+		);
+		};
+
+		(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk/xfbml.ad.js#xfbml=1&version=v2.5&appId=1549110715417488";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		}
+	</script>	
+
+	<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">The Options Guide</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active">
+					<a href="default.aspx">
+						Home <span class="sr-only">(current)</span>
+					</a>
+				</li>
+				<li>
+					<a href="binary-option.aspx">Binary Options</a>
+				</li>
+				<li>
+					<a href="stock-option.aspx">Stock Options</a>
+				</li>
+				<li>
+					<a href="option-trading-strategies.aspx">Stock Option Strategies</a>
+				</li>
+				<li>
+					<a href="futures-option.aspx">Futures Options</a>
+				</li>
+				<li>
+					<a href="http://www.coinguru.me">Crypto Trading (new!)
+				</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<form class="navbar-form navbar-left" role="search" action="http://www.theoptionsguide.com/search.aspx">
+						<div class="form-group">
+							<input type="hidden" name="cx" value="partner-pub-7340752664697664:j1105w2chqc" />
+							<input type="hidden" name="cof" value="FORID:11" />
+							<input type="hidden" name="ie" value="ISO-8859-1" />
+							<input type="text" name="q" alt="Search" class="" onfocus="this.className += ' searchSelected'" maxlength="50" value=""/>
+						</div>
+						<button type="submit" name="sa" class="btn btn-default">Search</button>
+					</form>
+					<script type="text/javascript" src="http://google.com/coop/cse/brand?form=searchbox_010623007121925777439%3Aborv1rd2h2a"></script>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>
+
+
+
+<div class="container">
+<body>
+<div class="row">
+<div class="col-sm-8">
+        <div class="visible-lg"><a href="default.aspx">Home</a> / <a href="option-trading-strategies.aspx">Option Strategy Finder</a> / <a href="synthetic-position.aspx">Synthetic Position</a></div><h1>Synthetic Short Call</h1>
+
+  		<div id="adTopDesktop" class="visible-lg" style="float:left;">
+	<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- The Options Guide - Top Rectangle ATF -->
+	<ins class="adsbygoogle"
+		 style="display:inline-block;width:300px;height:250px"
+		 data-ad-client="ca-pub-6324364492949153"
+		 data-ad-slot="5802826228"></ins>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+<div id="adTopMobile" class="hidden-lg">
+	<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- The Options Guide - Top Banner Ad -->
+	<ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-6324364492949153"
+		 data-ad-slot="5896361420"
+		 data-ad-format="auto"></ins>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+<br/>
+
+        <!-- google_ad_section_start -->
+        			
+<P>A synthetic short call is created when short stock position is combined with a short put of the same series.</P> 
+<table class="table"><tr class="info"><td>Synthetic Short Call Construction</td></tr><tr><td>Short 100 Shares<br /> Sell 1 ATM Put</td></tr></table>
+<p>The synthetic short call is so named because the established position has the same profit potential a short call.</p>
+<h2>Limited Profit Potential</h2>
+<p>The formula for calculating maximum profit is given below:</p><span class="highlight"><ul><li>Max Profit = Premium Received - Commissions Paid</li><li>Max Profit Achieved When Price of Underlying <= Strike Price of Short Put</li></ul></span>
+<div class="panel panel-default"><div class="panel-heading">Synthetic Short Call Payoff Diagram</div><div class="panel-body" align="center"><img class="img-responsive" src="images/synthetic-short-call.gif" alt="Graph showing the expected profit or loss for the synthetic short call option strategy in relation to the market price of the underlying security on option expiration date."></div></div><div id="adMiddle" class="visible-lg" align="center"><div class="well"><span style="width:100%;color:#1b1b1b!important"><b>0.00% Commissions Option Trading!<br/> <a rel = "nofollow" href="http://www.anrdoezrs.net/6q121wktqks7AD9HDC979AA9FDFA79CBAAA8E88888" target="_top" onmouseover="window.status='http://www.optionshouse.com';return true;" onmouseout="window.status=' ';return true;">Trade options FREE For 60 Days when you Open a New OptionsHouse Account</a><img src="http://www.lduhtrp.net/94116xjnbhf0362A65202332868302543331711111" width="1" height="1" border="0"/></b></span></div></div><div id="adMiddleMobile" class="hidden-lg" align="center"><div class="well"><span style="width:100%;color:#1b1b1b!important"><b>0.00% Commissions Option Trading!<br/> <a rel = "nofollow" href="http://www.anrdoezrs.net/6q121wktqks7AD9HDC979AA9FDFA79CBAAA8E88888" target="_top" onmouseover="window.status='http://www.optionshouse.com';return true;" onmouseout="window.status=' ';return true;">Trade options FREE For 60 Days when you Open a New OptionsHouse Account</a><img src="http://www.lduhtrp.net/94116xjnbhf0362A65202332868302543331711111" width="1" height="1" border="0"/></b></span></div></div>
+<h2>Unlimited Risk</h2>
+<p>The formula for calculating loss is given below:</p><span class="highlight"><ul><li>Maximum Loss = Unlimited</li><li>Loss Occurs When Price of Underlying > Sale Price of Underlying + Premium Received</li><li>Loss = Price of Underlying - Sale Price of Underlyingl - Premium Received + Commissions Paid</li></ul></span>
+<a id="breakeven"></a><h2>Breakeven Point(s)</h2><p>The underlier price at which break-even is achieved for the synthetic short call position can be calculated using the following formula.</p><span class="highlight"><ul><li>Breakeven Point = Sale Price of Underlying + Premium Received</li></ul></span><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6324364492949153" data-ad-slot="9835693821" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+        <!-- google_ad_section_end -->
+        <br/><br/><div id="adBottom"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle"style="display:block; text-align:center;"data-ad-format="fluid"data-ad-layout="in-article"data-ad-client="ca-pub-6324364492949153"data-ad-slot="9599466629"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+        
+ <h3>You May Also Like</h3>
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-6324364492949153"
+     data-ad-slot="6053946625"></ins>
+<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<h2>Continue Reading...</h2> 
+
+<h3><a href="buying-straddles-into-earnings.aspx">Buying Straddles into Earnings</a></h3> 
+    <p>Buying straddles is a great way to play earnings.
+        Many a times, stock price gap up or down following the quarterly earnings report
+        but often, the direction of the movement can be unpredictable. For instance, a sell
+        off can occur even though the earnings report is good if investors had expected
+        great results....<a href="buying-straddles-into-earnings.aspx">[Read on...]</a></p>
+
+<h3><a href="writing-puts-to-purchase-stocks.aspx">Writing Puts to Purchase Stocks</a></h3> 
+    <p>If you are very bullish on a particular stock for the long term and is looking to
+        purchase the stock but feels that it is slightly overvalued at the moment, then
+        you may want to consider writing put options on the
+        stock as a means to acquire it at a discount....<a href="writing-puts-to-purchase-stocks.aspx">[Read on...]</a></p>
+
+<h3>
+	<a href="binary-option.aspx">What are Binary Options and How to Trade Them?</a>
+</h3>
+<p>
+	Also known as digital options, binary options belong to a special class of exotic options in which the option trader speculate purely on the direction of the underlying within a relatively short period of time.....<a href="binary-options.aspx">[Read on...]</a>
+</p>
+
+<h3><a href="investing-in-growth-stocks-using-leaps.aspx">Investing in Growth Stocks using LEAPSÂ® options</a></h3> 
+    <p>If you are investing the Peter Lynch style, trying to predict the next multi-bagger,
+    then you would want to find out more about LEAPSÂ® and why I consider them to be a great option for investing in the next MicrosoftÂ®....
+        <a href="investing-in-growth-stocks-using-leaps.aspx">[Read on...]</a></p>
+
+<h3><a href="effect-of-dividends-on-option-pricing.aspx">Effect of Dividends on Option Pricing</a></h3> 
+    <p>Cash dividends issued by stocks have big impact on their option prices. This is
+    because the underlying stock price is expected to drop by the dividend amount on the ex-dividend date....<a href="effect-of-dividends-on-option-pricing.aspx">[Read on...]</a></p>
+
+<h3><a href="bull-call-spread-instead-of-covered-call.aspx">Bull Call Spread: An Alternative to the Covered Call</a></h3> 
+    <p>As an alternative to writing covered calls, one can enter a bull call spread for
+    a similar profit potential but with significantly less capital requirement. In
+    place of holding the underlying stock in the covered call strategy, the alternative....<a href="bull-call-spread-instead-of-covered-call.aspx">[Read on...]</a></p>
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- The Options Guide - Medium Rectangle 2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6324364492949153"
+     data-ad-slot="5199571825"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<h3><a href="dividend-capture-using-covered-calls.aspx">Dividend Capture using Covered Calls</a></h3> 
+    <p>Some stocks pay generous dividends every quarter. You qualify for the dividend if
+        you are holding on the shares before the ex-dividend date....<a href="dividend-capture-using-covered-calls.aspx">[Read on...]</a></p>
+
+<h3><a href="leverage-using-calls-not-margin-calls.aspx">Leverage using Calls, Not Margin Calls</a></h3> 
+    <p>To achieve higher returns in the stock market, besides doing more homework on the
+        companies you wish to buy, it is often necessary to
+        take on higher risk. A most common way to do that is to buy stocks on margin....<a href="leverage-using-calls-not-margin-calls.aspx">[Read on...]</a></p>
+
+<h3><a href="day-trading-option.aspx">Day Trading using Options</a></h3> 
+    <p>Day trading options can be a successful, profitable strategy but there are a couple of things you need to know before you use start using options for day trading.... <a href="day-trading-option.aspx">[Read on...]</a></p>
+
+<h3><a href="put-call-ratio.aspx">What is the Put Call Ratio and How to Use It</a></h3> 
+    <p>Learn about the put call ratio, the way it is derived and how it can be used as a contrarian indicator.... <a href="put-call-ratio.aspx">[Read on...]</a></p>
+
+<h3><a href="understanding-put-call-parity.aspx">Understanding Put-Call Parity</a></h3> 
+    <p>Put-call parity is an important principle in options pricing first identified by Hans Stoll in his paper, The Relation Between Put and Call Prices, in 1969. It states that the premium of a call option implies a certain fair price for the corresponding put option having the same strike price and expiration date, and vice versa.... <a href="understanding-put-call-parity.aspx">[Read on...]</a></p>
+
+<h3><a href="the-greeks.aspx">Understanding the Greeks</a></h3> 
+    <p>In options trading, you may notice the use of certain greek alphabets like delta
+        or gamma when describing risks associated with various positions. They are known as "the greeks".... <a href="the-greeks.aspx">[Read on...]</a></p>
+
+<h3><a href="discounted-cash-flow.aspx">Valuing Common Stock using Discounted Cash Flow
+    Analysis</a></h3> 
+    <p>Since the value of stock options depends on the price of the underlying stock, it
+        is useful to calculate the fair value of the stock by using a technique known as
+        discounted cash flow....
+        <a href="discounted-cash-flow.aspx">[Read on...]</a></p>
+
+<!-- 
+<h3>From Around The Web</h3> 
+<div id="rcjsload_89e4a0"></div>
+<script type="text/javascript">
+(function() {
+var referer="";try{if(referer=document.referrer,"undefined"==typeof referer)throw"undefined"}catch(exception){referer=document.location.href,(""==referer||"undefined"==typeof referer)&&(referer=document.URL)}referer=referer.substr(0,700);
+var rcel = document.createElement("script");
+rcel.id = 'rc_' + Math.floor(Math.random() * 1000);
+rcel.type = 'text/javascript';
+rcel.src = "http://trends.revcontent.com/serve.js.php?w=52801&t="+rcel.id+"&c="+(new Date()).getTime()+"&width="+(window.outerWidth || document.documentElement.clientWidth)+"&referer="+referer;
+rcel.async = true;
+var rcds = document.getElementById("rcjsload_89e4a0"); rcds.appendChild(rcel);
+})();
+</script>
+-->
+
+</div>
+
+
+<div class="col-sm-4">
+  		<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=searchkeys"></script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_sharing_toolbox"></div>
+<!-- The Options Forum RSS Feed -->
+<br/>
+<!-- 300x600 Adsense -->
+<!-- Hide in mobile to improve Adsense Viewability score -->
+<div class="visible-lg">
+
+	<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- The Options Guide - Sidebar Ad -->
+	<ins class="adsbygoogle"
+		 style="display:inline-block;width:300px;height:600px"
+		 data-ad-client="ca-pub-6324364492949153"
+		 data-ad-slot="9007239028"></ins>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+
+	
+</div>
+<br/>
+
+<h4>Follow Us on Facebook to Get Daily Strategies &amp; Tips!</h4>
+<div class="fb-page" data-href="https://www.facebook.com/theoptionsguide" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+	<blockquote cite="https://www.facebook.com/theoptionsguide" class="fb-xfbml-parse-ignore">
+		<a href="https://www.facebook.com/theoptionsguide">The Options Guide</a>
+	</blockquote>
+</div>
+<br/>
+<br/>
+
+<!-- Hide in mobile to improve Adsense Viewability score -->
+<div class="visible-lg">
+
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+	 style="display:inline-block;width:336px;height:280px"
+	 data-ad-client="ca-pub-6324364492949153"
+	 data-ad-slot="7307119827"></ins>
+<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+
+</div>
+
+<br/>
+<h4>Synthetic Positions</h4><div class="list-group"><a class="list-group-item" href="synthetic-position.aspx">Overview</a><a class="list-group-item" href="synthetic-long-call.aspx">Synthetic Long Call</a><a class="list-group-item" href="synthetic-long-put.aspx">Synthetic Long Put</a><a class="list-group-item" href="synthetic-long-stock-split-strikes.aspx">Synthetic Long Stock (Split Strikes)</a><a class="list-group-item" href="synthetic-long-stock.aspx">Synthetic Long Stock</a><a class="list-group-item" href="synthetic-short-call.aspx">Synthetic Short Call</a><a class="list-group-item" href="synthetic-short-put.aspx">Synthetic Short Put</a><a class="list-group-item" href="synthetic-short-stock-split-strikes.aspx">Synthetic Short Stock (Split Strikes)</a><a class="list-group-item" href="synthetic-short-stock.aspx">Synthetic Short Stock</a><a class="list-group-item" href="long-call-synthetic-straddle.aspx">Long Call Synthetic Straddle</a><a class="list-group-item" href="long-put-synthetic-straddle.aspx">Long Put Synthetic Straddle</a><a class="list-group-item" href="short-call-synthetic-straddle.aspx">Short Call Synthetic Straddle</a><a class="list-group-item" href="short-put-synthetic-straddle.aspx">Short Put Synthetic Straddle</a></div><h4>Options Strategies</h4><div class="list-group"><a class="list-group-item" href="buying-options.aspx">Buying Options</a><a class="list-group-item" href="selling-options.aspx">Selling Options</a><a class="list-group-item" href="options-spread.aspx">Options Spreads</a><a class="list-group-item" href="combinations.aspx">Options Combinations</a><a class="list-group-item" href="bullish-trading-strategies.aspx">Bullish Strategies</a><a class="list-group-item" href="bearish-trading-strategies.aspx">Bearish Strategies</a><a class="list-group-item" href="neutral-trading-strategies.aspx">Neutral Strategies</a><a class="list-group-item" href="synthetic-position.aspx">Synthetic Positions</a><a class="list-group-item" href="options-arbitrage.aspx">Options Arbitrage</a><a class="list-group-item" href="option-trading-strategies.aspx">Strategy Finder</a><a class="list-group-item" href="articles.aspx">Strategy Articles</a></div>
+          <!-- The Options Guide - Sidebar Square Ad 2 -->
+<!-- Hidden for Mobile to improve Ad viewability score -->
+<div class="visible-lg">
+	<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-6324364492949153"
+     data-ad-slot="1260586222"></ins>
+<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h4>Options Strategy Finder</h4>
+<form name="aspnetForm" method="post" action="option-trading-strategies.aspx" >
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C1D08F0A" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWFgKQsrC0BQKY8NPNAQLt5PzPAgLuh4nOAgLHiYC9AwL074rXBwK5y9aVAQLLtpaZAgLi1ZT2DALUlqqoAwLZt8v0CQLw1MmbBwLGl/fFCAL9hL7lCALA/4OZDQL7xPr1DwLWpo/CCwLZyaWsBwLYyaWsBwLbyaWsBwLayaWsBwLQs6/UBTfiTnmtlKIGBr4W85wHaxUYxaZr" />
+</div>
+<div class="well">
+
+<div class="row">
+Outlook on Underlying:<br><select name="outlook" id="ctl00_Main_ddlOutlook">
+	<option value=""></option>
+	<option value="Arbitrage">Arbitrage</option>
+	<option value="Bearish">Bearish</option>
+	<option selected="selected" value="Bullish">Bullish</option>
+	<option value="Neutral - Bearish on Volatility">Neutral - Bearish on Volatility</option>
+	<option value="Neutral - Bullish on Volatility">Neutral - Bullish on Volatility</option>
+
+</select>
+<br />
+<br />
+
+Profit Potential:<br><select name="profit" id="ctl00_Main_ddlProfitPotential">
+	<option value=""></option>
+	<option value="Limited">Limited</option>
+	<option value="Unlimited">Unlimited</option>
+
+</select>
+<br />
+<br />
+
+Loss Potential:<br><select name="risk" id="ctl00_Main_ddlRisk">
+	<option value=""></option>
+	<option value="Limited">Limited</option>
+	<option value="Unlimited">Unlimited</option>
+
+</select>
+<br />
+<br />
+
+Credit/Debit:<br><select name="creditdebit" id="ctl00_Main_ddlCreditDebit">
+	<option value=""></option>
+	<option value="Credit">Credit</option>
+	<option value="Debit">Debit</option>
+
+</select>
+<br />
+<br />
+No. Legs:<br><select name="numlegs" id="ctl00_Main_ddlNumLegs">
+	<option value=""></option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+
+</select>
+<br />
+<br />
+
+</div>
+
+<div align="right">
+<input type="submit" name="ctl00$Main$btnFilter" value="Find Strategies" id="ctl00_Main_btnFilter" class="btn btn-info" />
+</div>
+
+</div>
+
+</form><div id="adSidebarBottom" class="visible-lg">	<a rel="nofollow" href="https://ad.doubleclick.net/ddm/jump/N84001.3000316OPTIONSGUIDE/B10727559.200213282;sz=300x600;ord=[timestamp]?" target="_top">		<img src="https://ad.doubleclick.net/ddm/ad/N84001.3000316OPTIONSGUIDE/B10727559.200213282;sz=300x600;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" width="300" height="600" alt="" border="0"/>	</a></div>
+</div>
+
+
+</div> <!-- /.row -->
+
+<br/>
+<br/>
+<div class="row" align="center">
+
+	<div class="col-sm-3 visible-lg">
+	</div>
+	<div class="col-sm-6 well">
+
+		<form class="form-inline" role="search" action="http://www.theoptionsguide.com/search.aspx">
+			<div class="form-group">
+				<input type="text" name="q" class="form-control" placeholder="Enter search term" />
+			  </div>
+			<button type="submit" class="btn btn-info">Search</button>
+		</form>
+
+	</div>
+	<div class="col-sm-3 visible-lg">
+	</div>
+
+</div>
+
+<p>
+	<small>
+		Risk Warning: Stocks, futures and binary options trading discussed on this website can be considered High-Risk Trading Operations and their execution can be very risky and may result in significant losses or even in a total loss of all funds on your account. You should not risk more than you afford to lose. Before deciding to trade, you need to ensure that you understand the risks involved taking into account your investment objectives and level of experience.
+		Information on this website is provided strictly for informational and educational purposes only and is not intended as a trading recommendation service. TheOptionsGuide.com shall not be liable for any errors, omissions, or delays in the content, or for any actions taken in reliance thereon.
+	</small>
+	
+</p>
+
+<table border="0" bgcolor="#f80">
+	<tr>
+		<td style="padding: 5px; text-align: center; font-family: 'Arial';">
+			<span>
+				<b>General Risk Warning:</b>
+			</span>
+			<br />
+			<span>The financial products offered by the company carry a high level of risk and can result in the loss of all your funds. You should never invest money that you cannot afford to lose.</span>
+		</td>
+	</tr>
+</table>
+
+<div class="row" align="center">
+	<br/>
+	<a href="default.aspx">Home</a> | <a rel="nofollow" href="about-us.aspx">About Us</a> | <a rel="nofollow" href="terms-and-conditions.aspx">Terms of Use</a> | <a rel="nofollow" href="disclaimer.aspx">Disclaimer</a> | <a rel="nofollow" href="privacy-policy.aspx">Privacy Policy</a> | <a href="sitemap.aspx">Sitemap</a>
+	<br/>
+	<br/>
+	Copyright 2017. TheOptionsGuide.com - All Rights Reserved.
+	<br/>
+	<br/>
+</div>
+
+<script src="http://api.wipmania.com/jsonp?callback=jsonpCallback" type="text/javascript"></script><!-- Start of StatCounter Code -->
+<script type="text/javascript" language="javascript">
+var sc_project=1867628; 
+var sc_invisible=1; 
+var sc_partition=17; 
+var sc_security="71d827d2"; 
+</script>
+
+<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c18.statcounter.com/counter.php?sc_project=1867628&amp;java=0&amp;security=71d827d2&amp;invisible=1" alt="best counter" border="0"></a> </noscript>
+<!-- End of StatCounter Code --><script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-808745-1', 'auto');
+	ga('send', 'pageview');
+
+</script>
+</div>
+</body>
+</html>
